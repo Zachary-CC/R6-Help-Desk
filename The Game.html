@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Meh website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</style>
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-xxxlarge w3-text-theme"></h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()"><i class="fa fa-remove"></i></button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="Tips and tricks.html" class="w3-bar-item w3-button">Tips & tricks</a>
+  <a href="The Game.html" class="w3-bar-item w3-button">The Game</a>
+  <a href="Add us.html" class="w3-bar-item w3-button">Add Us</a>
+</nav>
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  <div class="w3-center">
+  <h1>THE GAME</h1>
+  <h1 class="w3-xxxlarge w3-animate-bottom"></h1>
+    <div class="w3-padding-32">
+      
+    </div>
+  </div>
+</header>
+<p> The first thing you should do as soon as you make it to Rank 5 in the game’s progression system is to set up a custom multiplayer game and explore the maps. This is so you can get a feel for the type of terrain you’ll be exploring, which walls are destructible, and where the objectives might be.
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Excluding the Recruit, Rainbow Six Siege features thirty operators at time of writing, split between attackers and defenders. As such, it can be a bit overwhelming knowing where to start.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>There’s a variety of guns to choose from, including assault rifles, submachine guns, and shotguns. They all handle uniquely, deal different amounts of damage, and will react in a particular way once fired. Each operator has access to a particular set of weapons, and you can customize their design and attachments.
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+     
+   
+
+
+
+
+
+
+
+
+
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "100%";
+    x.style.fontSize = "40px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+slideIndex = slideIndex + n;
+showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
